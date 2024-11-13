@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Order System</h1>
+    <p>Choose your items, place an order, and look up existing orders.</p>
+  </header>
+
+  <main>
+    <!-- Product Selection Section -->
+    <section id="product-selection">
+      <h2>Select Products</h2>
+      <div class="product-list">
+        <!-- Placeholder for dynamically loaded products -->
+      </div>
+      <button id="add-to-cart">Add to Cart</button>
+    </section>
+
+    <!-- Order Submission Section -->
+    <section id="order-submission">
+      <h2>Your Order</h2>
+      <div class="order-list">
+        <!-- Placeholder for items added to the order -->
+      </div>
+      <button id="submit-order">Place Order</button>
+      <p id="order-message"></p>
+    </section>
+
+    <!-- Order Lookup Section -->
+    <section id="order-lookup">
+      <h2>Look Up Order</h2>
+      <input type="text" id="order-id" placeholder="Enter Order Number" />
+      <button id="lookup-order">Find Order</button>
+      <div id="order-details">
+        <!-- Placeholder for order details after lookup -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Order System</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
