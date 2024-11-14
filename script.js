@@ -32,7 +32,6 @@ function getProductById(id) {
     return productsArray.find(product => product.id === id);
 }
 
-
 //function that loads all products from DB and displays on frontend
 function loadProductPictures(){
     const gallery = document.querySelector('.gallery');
@@ -58,6 +57,13 @@ function openModal(item) {
     document.getElementById('itemName').textContent = item.name;
     document.getElementById('quantity').value = 1; // Reset quantity to 1
     document.getElementById('modal').style.display = 'flex';
+
+    const productInfoDiv = document.getElementById('product-info');
+    productInfoDiv.innerHTML = `
+        <p><strong>Article Number:</strong> ${item.articleNumber}</p>
+        <p><strong>Price:</strong> $${item.price}</p>
+        <p>${item.description}</p>
+    `;
 }
 
 function closeModal() {
@@ -104,6 +110,7 @@ function sendOrder() {
         updateCartDisplay();
     }
 }
+
 
 async function initialize() {
     await getAllProducts();

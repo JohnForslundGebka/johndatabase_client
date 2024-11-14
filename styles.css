@@ -128,10 +128,8 @@ footer {
 }
 
 .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
+    margin-right: 90%;
+    font-size: 35px;
     cursor: pointer;
 }
 
