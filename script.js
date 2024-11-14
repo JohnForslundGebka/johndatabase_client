@@ -32,6 +32,16 @@ function getProductById(id) {
     return productsArray.find(product => product.id === id);
 }
 
+function getCartPrice (){
+    let totalPrice = 0;
+    cart.forEach(entry => {
+        const product = getProductById(entry.productId);
+        const productPrice = parseFloat(product.price);
+        totalPrice += productPrice * entry.quantity;
+    });
+    return totalPrice;
+}
+
 //function that loads all products from DB and displays on frontend
 function loadProductPictures(){
     const gallery = document.querySelector('.gallery');
@@ -98,6 +108,8 @@ function updateCartDisplay() {
         listItem.textContent = `${productName} - Quantity: ${productQuantity}`;
         cartItems.appendChild(listItem);
     });
+
+    const cartPrice = document.getElementById('order-message');
 }
 
 function sendOrder() {
